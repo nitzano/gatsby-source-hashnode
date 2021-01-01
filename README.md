@@ -1,6 +1,6 @@
 # gatsby-source-hashnode
 
-Gatsby source plugin for building websites using Hashnode API as data source.
+Gatsby source plugin for building websites using [Hashnode](https://hashnode.com/) as data source.
 
 ## Install
 
