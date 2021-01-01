@@ -8,7 +8,8 @@
   "files": [
     "index.js",
     "gatsby-node.js",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "homepage": "https://github.com/nitzano/gatsby-source-hashnode/blob/main/README.md",
   "keywords": [
