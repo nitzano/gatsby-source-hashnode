@@ -44,3 +44,6 @@ Get all user posts:
       }
     }
 ```
+
+## License
+MIT
