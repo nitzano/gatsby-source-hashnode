@@ -31,18 +31,18 @@ yarn add gatsby-source-hashnode
 Get all user posts:
 
 ```graphql
-    query {
-      allHashNodePost {
-        edges {
-          node {
-            coverImage
-            brief
-            slug
-            title
-          }
+query {
+    allHashNodePost {
+    edges {
+        node {
+        coverImage
+        brief
+        slug
+        title
         }
-      }
     }
+    }
+}
 ```
 
 ## License
