@@ -18,12 +18,12 @@ yarn add gatsby-source-hashnode
 
 ```javascript
 // in gatsby-config.js
-    {
-      resolve: "gatsby-source-hashnode",
-      options: {
+{
+    resolve: "gatsby-source-hashnode",
+    options: {
         username: "<HASHNODE_USERNAME>",
-      },
     },
+},
 ```
 
 ## How to query
