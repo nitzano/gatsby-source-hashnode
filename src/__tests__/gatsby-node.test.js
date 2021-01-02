@@ -74,6 +74,7 @@ describe("gatsby-source-hashnode", () => {
           minutes: expect.any(Number),
           words: expect.any(Number),
           text: expect.any(String),
+          time: expect.any(Number),
         }),
       })
     );
