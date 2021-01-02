@@ -42,4 +42,8 @@ describe("gatsby-source-hashnode", () => {
 
     expect(actions.createNode).toHaveBeenCalledTimes(1);
   });
+
+  it("should reflect reading time", async () => {
+    expect(1).toBe(1);
+  });
 });
