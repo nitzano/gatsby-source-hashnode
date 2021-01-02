@@ -1,4 +1,5 @@
 import { gql, request } from "graphql-request";
+import readingTime from "reading-time";
 
 const NODE_TYPE = "HashNodePost";
 
@@ -43,10 +44,11 @@ exports.sourceNodes = async (
   const { createNode } = actions;
 
   posts.map((post) => {
-    const { _id, contentMarkdown } = post;
+    const { _id, contentMarkdown = "" } = post;
 
     const node = {
       ...post,
+      readingTime: readingTime(contentMarkdown),
       id: createNodeId(_id),
       parent: null,
       children: [],
