@@ -15,7 +15,8 @@
   "keywords": [
     "gatsby",
     "gatsby-plugin",
-    "gatsby-source-plugin"
+    "gatsby-source-plugin",
+    "hashnode"
   ],
   "main": "index.js",
   "repository": "git@github.com-nitzano:nitzano/gatsby-source-hashnode.git",
