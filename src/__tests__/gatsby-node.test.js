@@ -6,6 +6,10 @@ describe("gatsby-source-hashnode", () => {
   let createNodeId;
   let createContentDigest;
 
+  const pluginOptions = {
+    username: "user1",
+  };
+
   beforeEach(() => {
     actions.createNode = jest.fn();
     createNodeId = jest.fn(() => `id`);
@@ -13,10 +17,6 @@ describe("gatsby-source-hashnode", () => {
   });
 
   it(`should create nodes based on fake graphql data`, async () => {
-    const pluginOptions = {
-      username: "user1",
-    };
-
     // graphql result
     const result = {
       user: {
@@ -46,6 +46,36 @@ describe("gatsby-source-hashnode", () => {
   });
 
   it("should reflect reading time", async () => {
-    expect(1).toBe(1);
+    // graphql result
+    const result = {
+      user: {
+        publicationDomain: "domain1.com",
+        publication: {
+          posts: [
+            {
+              contentMarkdown: "text text text text text",
+            },
+          ],
+        },
+      },
+    };
+
+    jest.spyOn(graphqlRequest, "request").mockImplementationOnce(() => result);
+
+    await sourceNodes(
+      { actions, createNodeId, createContentDigest },
+      pluginOptions
+    );
+
+    expect(actions.createNode).toHaveBeenCalledWith(
+      expect.objectContaining({
+        contentMarkdown: "text text text text text",
+        readingTime: expect.objectContaining({
+          minutes: expect.any(Number),
+          words: expect.any(Number),
+          text: expect.any(String),
+        }),
+      })
+    );
   });
 });
