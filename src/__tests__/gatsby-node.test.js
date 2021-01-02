@@ -2,18 +2,20 @@ import * as graphqlRequest from "graphql-request";
 import { sourceNodes } from "../gatsby-node";
 
 describe("gatsby-source-hashnode", () => {
-  it(`should create nodes based on fake graphql data`, async () => {
-    let actions = {};
-    let createNodeId;
-    let createContentDigest;
+  let actions = {};
+  let createNodeId;
+  let createContentDigest;
 
-    const pluginOptions = {
-      username: "user1",
-    };
-
+  beforeEach(() => {
     actions.createNode = jest.fn();
     createNodeId = jest.fn(() => `id`);
     createContentDigest = jest.fn(() => `digest`);
+  });
+
+  it(`should create nodes based on fake graphql data`, async () => {
+    const pluginOptions = {
+      username: "user1",
+    };
 
     // graphql result
     const result = {
