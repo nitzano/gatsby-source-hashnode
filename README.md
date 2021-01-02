@@ -18,12 +18,17 @@ yarn add gatsby-source-hashnode
 
 ```javascript
 // in gatsby-config.js
-{
-    resolve: "gatsby-source-hashnode",
-    options: {
-        username: "<HASHNODE_USERNAME>",
-    },
-},
+module.exports = {
+    plugins: [
+        {
+            resolve: "gatsby-source-hashnode",
+            options: {
+                username: "<HASHNODE_USERNAME>",
+            },
+        },
+    ]
+}
+
 ```
 
 ## How to query
@@ -31,16 +36,16 @@ yarn add gatsby-source-hashnode
 Get all user posts:
 
 ```graphql
-query {
+{
     allHashNodePost {
-    edges {
-        node {
-        coverImage
-        brief
-        slug
-        title
+        edges {
+            node {
+                coverImage
+                brief
+                slug
+                title
+            }
         }
-    }
     }
 }
 ```
