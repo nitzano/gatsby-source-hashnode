@@ -8,11 +8,7 @@ Gatsby source plugin for building websites using [Hashnode](https://hashnode.com
 npm install gatsby-source-hashnode
 ```
 
-or 
 
-```bash
-yarn add gatsby-source-hashnode
-```
 
 ## How to use
 
