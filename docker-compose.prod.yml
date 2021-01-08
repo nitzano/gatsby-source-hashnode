@@ -2,11 +2,12 @@ version: '3.9'
 
 services:
   lib:
+    image: gatsby-source-hashnode:prod
     build:
       context: .
       dockerfile: ./prod.Dockerfile
       args:
         GITHUB_PERSONAL_TOKEN: $GITHUB_PERSONAL_TOKEN
     tty: yes    
-    image: gatsby-source-hashnode:prod
+    
 
