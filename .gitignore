@@ -105,3 +105,6 @@ dist
 
 # misc
 .vscode
+
+# output files
+gatsby-node.js
