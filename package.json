@@ -44,7 +44,8 @@
     "build": "babel src --out-dir . --ignore \"**/__tests__\"",
     "prepare": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir . --ignore \"**/__tests__\"",
-    "test": "jest"
+    "test": "jest",
+    "np": "np"
   },
   "engines": {
     "node": ">=10.13.0"
