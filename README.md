@@ -16,6 +16,8 @@ npm install gatsby-source-hashnode
 
 ## How to use
 
+Configure the plugin in `gatsby-config.js`:
+
 ```javascript
 // in gatsby-config.js
 module.exports = {
@@ -33,7 +35,8 @@ module.exports = {
 
 ## How to query
 
-Get all user posts:
+### Get  user posts
+
 
 ```graphql
 {
@@ -44,6 +47,29 @@ Get all user posts:
                 brief
                 slug
                 title
+            }
+        }
+    }
+}
+```
+
+### Get post reading time
+
+(With the kind help of [reading-time](https://www.npmjs.com/package/reading-time) )
+
+
+```graphql
+{
+    allHashNodePost {
+        edges {
+            node {
+                title
+                readingTime {
+                    text       # "2 min read"
+                    minutes    # 2
+                    time       # 120000
+                    words      # 100
+                }
             }
         }
     }
