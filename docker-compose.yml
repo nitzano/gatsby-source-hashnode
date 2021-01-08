@@ -3,10 +3,10 @@ version: '3.4'
 services:
   lib:
     tty: yes    
-    image: lib
+    image: gatsby-source-hashnode:dev
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./dev.Dockerfile
     environment:
       NODE_ENV: development
     volumes:
