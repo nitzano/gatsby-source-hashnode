@@ -55,7 +55,7 @@ module.exports = {
 
 ### Get post reading time
 
-(With the kind help of [reading-time](https://www.npmjs.com/package/reading-time) )
+(With the kind help of [reading-time](https://www.npmjs.com/package/reading-time))
 
 
 ```graphql
