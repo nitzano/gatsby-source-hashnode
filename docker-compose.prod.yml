@@ -7,7 +7,9 @@ services:
       context: .
       dockerfile: ./prod.Dockerfile
       args:
-        GITHUB_PERSONAL_TOKEN: $GITHUB_PERSONAL_TOKEN
+        GITHUB_PERSONAL_TOKEN: $GITHUB_PERSONAL_TOKEN        
     tty: yes    
+    environment:
+      NPM_TOKEN: $NPM_TOKEN
     
 
