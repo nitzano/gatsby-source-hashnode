@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  lib:
+    tty: yes    
+    image: gatsby-source-hashnode:prod          
+    build:
+      context: .
+      dockerfile: ./prod.Dockerfile
+    environment:
+      NODE_ENV: production
+
