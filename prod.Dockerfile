@@ -9,9 +9,11 @@ RUN git clone https://${GITHUB_PERSONAL_TOKEN}@github.com/nitzano/gatsby-source-
 
 ENV NODE_ENV development
 
-# Run and build
-#RUN yarn install
+# build
+WORKDIR /usr/src/app/gatsby-source-hashnode
 
+RUN yarn install
 
+ENV NODE_ENV production
 
 CMD /bin/sh

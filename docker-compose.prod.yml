@@ -8,7 +8,5 @@ services:
       args:
         GITHUB_PERSONAL_TOKEN: $GITHUB_PERSONAL_TOKEN
     tty: yes    
-    image: gatsby-source-hashnode:prod          
-    environment:
-      NODE_ENV: production
+    image: gatsby-source-hashnode:prod
 
