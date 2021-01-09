@@ -11,7 +11,7 @@ RUN git clone https://${GITHUB_PERSONAL_TOKEN}@github.com/nitzano/gatsby-source-
 
 WORKDIR /usr/src/app/gatsby-source-hashnode
 
-RUN git config user.name ${GIT_USER_NAME}
+RUN git config user.name "${GIT_USER_NAME}"
 RUN git config user.email ${GIT_USER_EMAIL}
 
 # build
