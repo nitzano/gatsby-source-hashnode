@@ -7,11 +7,10 @@ services:
       context: .
       dockerfile: ./prod.Dockerfile
       args:
-        GITHUB_PERSONAL_TOKEN: $GITHUB_PERSONAL_TOKEN
-    
+        GITHUB_PERSONAL_TOKEN: $GITHUB_PERSONAL_TOKEN 
+        GIT_USER_NAME: $GIT_USER_NAME   
+        GIT_USER_EMAIL: $GIT_USER_EMAIL   
     tty: yes    
     environment:
       NPM_TOKEN: $NPM_TOKEN
-      GIT_COMMITTER_NAME: $GIT_COMMITTER_NAME
-      GIT_COMMITTER_EMAIL: $GIT_COMMITTER_EMAIL    
 
