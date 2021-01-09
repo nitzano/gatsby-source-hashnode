@@ -18,14 +18,14 @@ export async function getUserPosts(username) {
         publicationDomain
         publication {
           posts {
+            _id
+            brief
+            contentMarkdown
+            coverImage
             cuid
+            dateAdded
             slug
             title
-            brief
-            coverImage
-            dateAdded
-            _id
-            contentMarkdown
           }
         }
       }
