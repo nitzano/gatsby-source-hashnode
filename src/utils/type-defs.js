@@ -1,6 +1,4 @@
-import { gql } from "graphql-request";
-
-export const typeDefs = gql`
+export const typeDefs = `
   type HashNodePost implements Node {
     _id: String
     brief: String
