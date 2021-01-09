@@ -1,4 +1,6 @@
-export const typeDefs = `
+import { gql } from "graphql-request";
+
+export const typeDefs = gql`
   type HashNodePost implements Node {
     _id: String
     brief: String
@@ -16,9 +18,9 @@ export const typeDefs = `
   type ReadingTime {
     # full time description
     text: String
-    minutes: Int
+    minutes: Float
     # time (in milliseconds)
-    time: Int
+    time: Float
     words: Int
   }
 `;
