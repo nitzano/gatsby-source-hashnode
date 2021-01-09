@@ -33,7 +33,7 @@ export async function getUserPosts(username) {
   `;
 
   const {
-    user: { publicationDomain, publication: { posts = [] } = {} },
+    user: { publication: { posts = [] } = {} },
   } = await request("https://api.hashnode.com/", query, variables);
 
   return posts;
