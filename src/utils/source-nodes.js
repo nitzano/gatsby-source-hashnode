@@ -1,6 +1,6 @@
 import readingTime from "reading-time";
 import { getUserPosts } from "./get-user-posts";
-import { typeDefs } from "./types";
+import { typeDefs } from "./type-defs";
 
 const NODE_TYPE = "HashNodePost";
 
