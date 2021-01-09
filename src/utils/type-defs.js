@@ -14,7 +14,7 @@ export const typeDefs = gql`
   }
 
   type ReadingTime {
-    test: String
+    text: String
     minutes: Int
     time: Int
     words: Int
