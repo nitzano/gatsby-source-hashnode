@@ -1,45 +1,18 @@
-import { gql, request } from "graphql-request";
 import readingTime from "reading-time";
+import { getUserPosts } from "./get-user-posts";
 
 const NODE_TYPE = "HashNodePost";
 
 export async function sourceNodes(
-    { actions, createNodeId, createContentDigest },
-    { username }
-  ) {
+  { actions, createNodeId, createContentDigest },
+  { username }
+) {
   // check username exists
   if (!username) {
     throw new Error("no username supplied");
   }
 
-  const variables = {
-    username,
-  };
-
-  // query information
-  const query = gql`
-    query getPosts($username: String!) {
-      user(username: $username) {
-        publicationDomain
-        publication {
-          posts {
-            cuid
-            slug
-            title
-            brief
-            coverImage
-            dateAdded
-            _id
-            contentMarkdown
-          }
-        }
-      }
-    }
-  `;
-
-  const {
-    user: { publicationDomain, publication: { posts = [] } = {} },
-  } = await request("https://api.hashnode.com/", query, variables);
+  const posts = await getUserPosts(username);
 
   const { createNode } = actions;
 
@@ -62,5 +35,4 @@ export async function sourceNodes(
 
     createNode(node);
   });
-
-  }
+}
