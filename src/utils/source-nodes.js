@@ -1,5 +1,6 @@
 import readingTime from "reading-time";
 import { getUserPosts } from "./get-user-posts";
+import { typeDefs } from "./types";
 
 const NODE_TYPE = "HashNodePost";
 
@@ -7,15 +8,19 @@ export async function sourceNodes(
   { actions, createNodeId, createContentDigest },
   { username }
 ) {
+  const { createNode, createTypes } = actions;
   // check username exists
   if (!username) {
     throw new Error("no username supplied");
   }
 
+  // create types
+  createTypes(typeDefs);
+
+  // get posts
   const posts = await getUserPosts(username);
 
-  const { createNode } = actions;
-
+  // process posts
   posts.map((post) => {
     const { _id, contentMarkdown = "" } = post;
 
