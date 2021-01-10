@@ -18,7 +18,6 @@ Gatsby source plugin for building websites using [Hashnode](https://hashnode.com
   - [How to query](#how-to-query)
     - [Get  user posts](#get--user-posts)
     - [Get post reading time](#get-post-reading-time)
-  - [License](#license)
 
 ## Install
 
@@ -89,6 +88,3 @@ module.exports = {
     }
 }
 ```
-
-## License
-MIT
