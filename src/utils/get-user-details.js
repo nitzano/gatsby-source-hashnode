@@ -6,7 +6,7 @@ import { gql, request } from "graphql-request";
  * @export
  * @param {string} username
  */
-export async function getUser(username) {
+export async function getUserDetails(username) {
   const variables = {
     username,
   };

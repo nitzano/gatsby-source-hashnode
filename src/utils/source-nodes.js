@@ -1,8 +1,7 @@
 import readingTime from "reading-time";
+import { getUserDetails } from "./get-user-details";
 import { getUserPosts } from "./get-user-posts";
 import { typeDefs } from "./type-defs";
-
-const NODE_TYPE = "HashNodePost";
 
 export async function sourceNodes(
   { actions, createNodeId, createContentDigest },
@@ -16,6 +15,22 @@ export async function sourceNodes(
 
   // create types
   createTypes(typeDefs);
+
+  // create hash node user
+  const userDetails = await getUserDetails(username);
+
+  const hashNodeUser = {
+    ...userDetails,
+    id: createNodeId(userDetails._id),
+    parent: null,
+    children: [],
+    internal: {
+      type: "HashNodeUser",
+      description: "details about the user",
+    },
+  };
+
+  createNode(hashNodeUser);
 
   // get posts
   const posts = await getUserPosts(username);
@@ -31,7 +46,7 @@ export async function sourceNodes(
       parent: null,
       children: [],
       internal: {
-        type: NODE_TYPE,
+        type: "HashNodePost",
         mediaType: `text/markdown`,
         content: contentMarkdown,
         contentDigest: createContentDigest(post),
