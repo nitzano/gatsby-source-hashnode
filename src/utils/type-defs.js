@@ -25,7 +25,7 @@ export const typeDefs = gql`
   }
 
   type HashNodeUser {
-    _id: ID!
+    _id: ID
     username: String
     name: String
     tagline: String
