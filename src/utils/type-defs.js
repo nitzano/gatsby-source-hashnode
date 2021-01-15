@@ -23,4 +23,23 @@ export const typeDefs = gql`
     time: Float
     words: Int
   }
+
+  type HashNodeUser {
+    _id: ID!
+    username: String
+    name: String
+    tagline: String
+    isEvangelist: Boolean
+    dateJoined: String
+    numFollowing: Int
+    numFollowers: Int
+    isDeactivated: Boolean
+    location: String
+    photo: String
+    coverImage: String
+    numPosts: Int
+    numReactions: Int
+    blogHandle: String
+    publicationDomain: String
+  }
 `;
