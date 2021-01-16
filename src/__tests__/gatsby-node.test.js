@@ -46,7 +46,13 @@ describe("gatsby-source-hashnode", () => {
       pluginOptions
     );
 
-    expect(actions.createNode).toHaveBeenNthCalledWith(2);
+    expect(actions.createNode).toHaveBeenNthCalledWith(
+      2,
+      expect.objectContaining({
+        cuid: "9ec3bf664b7111ebae930242ac130002",
+        slug: "article-1",
+      })
+    );
   });
 
   it("should reflect reading time", async () => {
