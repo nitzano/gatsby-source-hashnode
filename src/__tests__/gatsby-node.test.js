@@ -49,7 +49,7 @@ describe("gatsby-source-hashnode", () => {
     expect(actions.createNode).toHaveBeenNthCalledWith(2);
   });
 
-  it.only("should reflect reading time", async () => {
+  it("should reflect reading time", async () => {
     // graphql result
     const mockedPosts = [
       {
