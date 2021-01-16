@@ -1,5 +1,15 @@
-import * as graphqlRequest from "graphql-request";
 import { sourceNodes } from "../gatsby-node";
+import { getUserPosts } from "../utils/get-user-posts";
+
+jest.mock("../utils/get-user-posts.js", () => ({
+  getUserPosts: jest.fn(() => []),
+}));
+
+jest.mock("../utils/get-user-details.js", () => ({
+  getUserDetails: jest.fn(() => ({
+    _id: "1",
+  })),
+}));
 
 describe("gatsby-source-hashnode", () => {
   let actions = {};
@@ -12,37 +22,31 @@ describe("gatsby-source-hashnode", () => {
 
   beforeEach(() => {
     actions.createNode = jest.fn();
+    actions.createTypes = jest.fn();
     createNodeId = jest.fn(() => `id`);
     createContentDigest = jest.fn(() => `digest`);
   });
 
-  it(`should create nodes based on fake graphql data`, async () => {
+  it.only(`should get user posts`, async () => {
     // graphql result
-    const result = {
-      user: {
-        publicationDomain: "domain1.com",
-        publication: {
-          posts: [
-            {
-              cuid: "9ec3bf664b7111ebae930242ac130002",
-              slug: "article-1",
-              title: "Article 1 title",
-              brief: "brief1",
-              coverImage: "https://cdn.hashnode.com/fake//12345.jpeg",
-            },
-          ],
-        },
+    const mockedPosts = [
+      {
+        cuid: "9ec3bf664b7111ebae930242ac130002",
+        slug: "article-1",
+        title: "Article 1 title",
+        brief: "brief1",
+        coverImage: "https://cdn.hashnode.com/fake//12345.jpeg",
       },
-    };
+    ];
 
-    jest.spyOn(graphqlRequest, "request").mockImplementationOnce(() => result);
+    getUserPosts.mockReturnValueOnce(mockedPosts);
 
     await sourceNodes(
       { actions, createNodeId, createContentDigest },
       pluginOptions
     );
 
-    expect(actions.createNode).toHaveBeenCalledTimes(1);
+    expect(actions.createNode).toHaveBeenCalledTimes(2);
   });
 
   it("should reflect reading time", async () => {
@@ -59,8 +63,6 @@ describe("gatsby-source-hashnode", () => {
         },
       },
     };
-
-    jest.spyOn(graphqlRequest, "request").mockImplementationOnce(() => result);
 
     await sourceNodes(
       { actions, createNodeId, createContentDigest },
