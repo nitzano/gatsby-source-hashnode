@@ -99,21 +99,21 @@ module.exports = {
         edges {
             node {
                 _id
-                username
-                name
-                tagline
-                isEvangelist
-                dateJoined
-                numFollowing
-                numFollowers
-                isDeactivated
-                location
-                photo
-                coverImage
-                numPosts
-                numReactions
-                blogHandle
-                publicationDomain
+                username           # "username1"
+                name               # "First last"
+                tagline            # "I do stuff"
+                isEvangelist       # true
+                dateJoined         # "2014-01-01T01:00:00.000Z"
+                numFollowing       # 14
+                numFollowers       # 503
+                isDeactivated      # false
+                location           # Canada
+                photo              # https:/...
+                coverImage         # https:/...
+                numPosts           # 50
+                numReactions       # 95
+                blogHandle         # "userhandle1"
+                publicationDomain  # "blog.mydomain.."
             }
         }
     }
