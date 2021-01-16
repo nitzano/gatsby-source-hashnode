@@ -27,7 +27,7 @@ describe("gatsby-source-hashnode", () => {
     createContentDigest = jest.fn(() => `digest`);
   });
 
-  it.only(`should get user posts`, async () => {
+  it(`should get user posts`, async () => {
     // graphql result
     const mockedPosts = [
       {
@@ -46,30 +46,26 @@ describe("gatsby-source-hashnode", () => {
       pluginOptions
     );
 
-    expect(actions.createNode).toHaveBeenCalledTimes(2);
+    expect(actions.createNode).toHaveBeenNthCalledWith(2);
   });
 
-  it("should reflect reading time", async () => {
+  it.only("should reflect reading time", async () => {
     // graphql result
-    const result = {
-      user: {
-        publicationDomain: "domain1.com",
-        publication: {
-          posts: [
-            {
-              contentMarkdown: "text text text text text",
-            },
-          ],
-        },
+    const mockedPosts = [
+      {
+        contentMarkdown: "text text text text text",
       },
-    };
+    ];
+
+    getUserPosts.mockReturnValueOnce(mockedPosts);
 
     await sourceNodes(
       { actions, createNodeId, createContentDigest },
       pluginOptions
     );
 
-    expect(actions.createNode).toHaveBeenCalledWith(
+    expect(actions.createNode).toHaveBeenNthCalledWith(
+      2,
       expect.objectContaining({
         contentMarkdown: "text text text text text",
         readingTime: expect.objectContaining({
