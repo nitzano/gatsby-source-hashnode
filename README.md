@@ -18,6 +18,7 @@ Gatsby source plugin for building websites using [Hashnode](https://hashnode.com
   - [How to query](#how-to-query)
     - [Get  user posts](#get--user-posts)
     - [Get post reading time](#get-post-reading-time)
+    - [Get user details](#get-user-details)
 
 ## Install
 
@@ -83,6 +84,36 @@ module.exports = {
                     time       # 120000
                     words      # 100
                 }
+            }
+        }
+    }
+}
+```
+
+
+### Get user details
+
+```graphql
+{
+    allHashNodeUser {
+        edges {
+            node {
+                _id
+                username
+                name
+                tagline
+                isEvangelist
+                dateJoined
+                numFollowing
+                numFollowers
+                isDeactivated
+                location
+                photo
+                coverImage
+                numPosts
+                numReactions
+                blogHandle
+                publicationDomain
             }
         }
     }
