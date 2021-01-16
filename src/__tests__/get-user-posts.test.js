@@ -11,7 +11,7 @@ jest.mock("../utils/get-user-details.js", () => ({
   })),
 }));
 
-describe("gatsby-source-hashnode", () => {
+describe("getUserPosts", () => {
   let actions = {};
   let createNodeId;
   let createContentDigest;
