@@ -33,7 +33,7 @@ npm install gatsby-source-hashnode
 Configure the plugin in `gatsby-config.js`:
 
 ```javascript
-// in gatsby-config.js
+// gatsby-config.js
 module.exports = {
     plugins: [
         {
