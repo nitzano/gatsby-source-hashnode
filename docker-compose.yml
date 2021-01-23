@@ -1,6 +1,11 @@
-version: '3.4'
+version: '3.8'
 
 services:
+  sample-site:
+    image: sample-site:dev
+    build:
+      context: ./sample-site      
+      dockerfile: Dockerfile
   lib:
     tty: yes    
     image: gatsby-source-hashnode:dev
