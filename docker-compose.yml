@@ -8,6 +8,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
+    environment:
+      HASHNODE_USERNAME: $HASHNODE_USERNAME
     volumes:
       - ./sample-site/src:/app/src
       - ./sample-site/gatsby-config.js:/app/gatsby-config.js
