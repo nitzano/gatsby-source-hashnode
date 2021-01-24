@@ -8,6 +8,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
+    volumes:
+      - ./sample-site/src:/app/src
   lib:
     tty: yes    
     image: gatsby-source-hashnode:dev
