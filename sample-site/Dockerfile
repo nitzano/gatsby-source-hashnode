@@ -1,4 +1,7 @@
-FROM gatsbyjs/gatsby:onbuild as build
+FROM node:lts
 
-FROM gatsbyjs/gatsby
-COPY --from=build /app/public /pub
+RUN yarn global add gatsby-cli
+WORKDIR /app
+ADD . ./
+RUN yarn
+CMD gatsby develop
