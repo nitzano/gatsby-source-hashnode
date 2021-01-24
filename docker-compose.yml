@@ -11,6 +11,7 @@ services:
     volumes:
       - ./sample-site/src:/app/src
       - ./sample-site/gatsby-config.js:/app/gatsby-config.js
+      - ./sample-site/yarn.lock:/app/yarn.lock
   lib:
     tty: yes    
     image: gatsby-source-hashnode:dev
