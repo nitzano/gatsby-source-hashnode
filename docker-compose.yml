@@ -7,7 +7,7 @@ services:
       context: ./sample-site      
       dockerfile: Dockerfile
     ports:
-      - "4000:80"
+      - "8000:8000"
   lib:
     tty: yes    
     image: gatsby-source-hashnode:dev

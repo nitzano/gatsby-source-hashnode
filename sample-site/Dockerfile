@@ -2,6 +2,6 @@ FROM node:lts
 
 RUN yarn global add gatsby-cli
 WORKDIR /app
-ADD . ./
+ADD . .
 RUN yarn
-CMD gatsby develop
+CMD gatsby develop -H 0.0.0.0
