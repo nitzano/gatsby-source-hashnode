@@ -1,7 +1,7 @@
 FROM node:lts
-ENV NODE_ENV=development
 
 WORKDIR /usr/src/app
+
 COPY ["package.json","./"]
 # COPY ["package.json", "yarn.lock","./"]
 
@@ -10,4 +10,3 @@ COPY packages/sample-site/package.json ./packages/sample-site/package.json
 RUN yarn install --pure-lockfile --non-interactive
 
 COPY . .
-CMD /bin/sh

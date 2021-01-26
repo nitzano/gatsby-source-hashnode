@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-    base:
-      image: gsh:base
+  base:
+    image: gsh:base
     build:
       context: ./      
       dockerfile: dev.Dockerfile
   sample-site:
-    image: gsh:Base
+    image: gsh:base
     ports:
       - "8000:8000"
     environment:
