@@ -1,30 +1,34 @@
 version: '3.8'
 
 services:
-  sample-site:
-    image: sample-site:dev
+    base:
+      image: gsh:base
     build:
-      context: ./sample-site      
-      dockerfile: Dockerfile
+      context: ./      
+      dockerfile: dev.Dockerfile
+  sample-site:
+    image: gsh:Base
     ports:
       - "8000:8000"
     environment:
       HASHNODE_USERNAME: $HASHNODE_USERNAME
-    volumes:
-      - ./sample-site/src:/app/src
-      - ./sample-site/gatsby-config.js:/app/gatsby-config.js
-      - ./sample-site/yarn.lock:/app/yarn.lock
-      - ./sample-site/package.json:/app/package.json
-  lib:
-    tty: yes    
-    image: gatsby-source-hashnode:dev
-    build:
-      context: .
-      dockerfile: ./dev.Dockerfile
-    environment:
-      NODE_ENV: development
-    volumes:
-      - ./src:/usr/src/app/src
-      - ./package.json:/usr/src/app/package.json
-      - ./yarn.lock:/usr/src/app/yarn.lock
+    working_dir: /usr/src/app/packages/sample-site
+    command: yarn develop
+    # volumes:
+    #   - ./sample-site/src:/app/src
+    #   - ./sample-site/gatsby-config.js:/app/gatsby-config.js
+    #   - ./sample-site/yarn.lock:/app/yarn.lock
+    #   - ./sample-site/package.json:/app/package.json
+  # lib:
+  #   tty: yes    
+  #   image: gatsby-source-hashnode:dev
+  #   build:
+  #     context: .
+  #     dockerfile: ./dev.Dockerfile
+  #   environment:
+  #     NODE_ENV: development
+  #   volumes:
+  #     - ./src:/usr/src/app/src
+  #     - ./package.json:/usr/src/app/package.json
+  #     - ./yarn.lock:/usr/src/app/yarn.lock
 
