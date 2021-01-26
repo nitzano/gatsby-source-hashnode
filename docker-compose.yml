@@ -14,11 +14,10 @@ services:
       HASHNODE_USERNAME: $HASHNODE_USERNAME
     working_dir: /usr/src/app/packages/sample-site
     command: yarn develop
-    # volumes:
-    #   - ./sample-site/src:/app/src
-    #   - ./sample-site/gatsby-config.js:/app/gatsby-config.js
-    #   - ./sample-site/yarn.lock:/app/yarn.lock
-    #   - ./sample-site/package.json:/app/package.json
+    volumes:
+      - ./packages/sample-site/src:/usr/src/app/packages/sample-site/src
+      - ./packages/sample-site/package.json:/usr/src/app/packages/sample-site/package.json
+      - ./packages/sample-site/yarn.lock:/usr/src/app/packages/sample-site/yarn.lock
   # lib:
   #   tty: yes    
   #   image: gatsby-source-hashnode:dev
