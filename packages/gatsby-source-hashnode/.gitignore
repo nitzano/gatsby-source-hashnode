@@ -108,3 +108,7 @@ dist
 
 # output files
 ./gatsby-node.js
+
+# output files
+lib
+dist
