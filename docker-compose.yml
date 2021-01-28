@@ -2,12 +2,12 @@ version: '3.8'
 
 services:
   base:
-    image: gatsby-source-hashnode:dev
+    image: gsh:dev
     build:
       context: ./      
       dockerfile: dev.Dockerfile
   sample-site:
-    image: gatsby-source-hashnode:dev
+    image: gsh:dev
     ports:
       - "8000:8000"
     environment:
@@ -22,7 +22,7 @@ services:
     tty: yes
     working_dir: /usr/src/app/packages/gatsby-source-hashnode
     command: /bin/sh    
-    image: gatsby-source-hashnode:dev
+    image: gsh:dev
     environment:
       NODE_ENV: development
     volumes:
