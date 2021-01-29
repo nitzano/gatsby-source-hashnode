@@ -105,6 +105,4 @@ dist
 
 # misc	
 **/.vscode
-
-# output files	
-gatsby-node.js 
+**/node_modules
