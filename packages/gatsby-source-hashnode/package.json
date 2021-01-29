@@ -43,9 +43,9 @@
   "scripts": {
     "clean": "rimraf lib",
     "prebuild": "yarn run clean",
-    "build": "babel src --out-dir ./lib",
+    "build": "babel src --out-dir .",
     "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir ./lib",
+    "watch": "babel -w src --out-dir .",
     "test": "jest",
     "release": "np"
   },
