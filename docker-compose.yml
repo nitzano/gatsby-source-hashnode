@@ -23,8 +23,6 @@ services:
     working_dir: /usr/src/app/packages/gatsby-source-hashnode
     command: /bin/sh    
     image: gsh:dev
-    environment:
-      NODE_ENV: development
     volumes:
       - ./packages/gatsby-source-hashnode/src:/usr/src/app/packages/gatsby-source-hashnode/src
       - ./packages/gatsby-source-hashnode/package.json:/usr/src/app/packages/gatsby-source-hashnode/package.json
