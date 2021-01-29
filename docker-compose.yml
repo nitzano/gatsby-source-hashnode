@@ -18,6 +18,7 @@ services:
     volumes:
       - ./packages/sample-site/src:/usr/src/app/packages/sample-site/src
       - ./packages/sample-site/package.json:/usr/src/app/packages/sample-site/package.json
+      - ./packages/sample-site/gatsby-config.js:/usr/src/app/packages/sample-site/gatsby-config.js
       - ./packages/gatsby-source-hashnode/src:/usr/src/app/packages/gatsby-source-hashnode/src
   lib:
     tty: yes
