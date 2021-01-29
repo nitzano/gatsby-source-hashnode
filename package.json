@@ -8,8 +8,7 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": ["jest", "jest/**"]
+    ]
   },
   "scripts": {
     "rebuild": "run-s lib:build sample-site:develop",
