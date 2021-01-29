@@ -18,8 +18,6 @@ RUN yarn install
 
 # build
 ENV NODE_ENV production
-WORKDIR /usr/src/app/gatsby-source-hashnode
-
-RUN yarn build
+RUN yarn workspace gatsby-source-hashnode build
 
 CMD /bin/sh
