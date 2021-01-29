@@ -1,4 +1,11 @@
 {
     "presets": ["babel-preset-gatsby-package"],
+    "env": {
+      "production": {
+        "ignore": [
+          "**/__tests__"
+        ]        
+      }
+    }
 }
   
