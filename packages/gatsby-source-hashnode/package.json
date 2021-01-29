@@ -10,7 +10,7 @@
     "gatsby-node.js",
     "utils"
   ],
-  "homepage": "https://github.com/nitzano/gatsby-source-hashnode/blob/main/README.md",
+  "homepage": "https://github.com/nitzano/gatsby-source-hashnode/blob/main/packages/gatsby-source-hashnode/README.md",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
