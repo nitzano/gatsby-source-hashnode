@@ -1,7 +1,14 @@
 FROM node:lts
-ENV NODE_ENV=development
+
 WORKDIR /usr/src/app
+
 COPY ["package.json", "yarn.lock","./"]
-RUN yarn install --silent --ignore-scripts
+
+COPY packages/gatsby-source-hashnode/package.json ./packages/gatsby-source-hashnode/package.json
+COPY packages/sample-site/package.json ./packages/sample-site/package.json
+
+RUN yarn install --pure-lockfile --non-interactive
+
 COPY . .
-CMD /bin/sh
+
+CMD /bin/bash

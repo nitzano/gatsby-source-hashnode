@@ -1,0 +1,58 @@
+{
+  "name": "gatsby-source-hashnode",
+  "description": "Gatsby source plugin for building data from Hashnode",
+  "version": "0.2.0",
+  "bugs": {
+    "url": "https://github.com/nitzano/gatsby-source-hashnode/issues"
+  },
+  "files": [
+    "index.js",
+    "gatsby-node.js",
+    "utils"
+  ],
+  "homepage": "https://github.com/nitzano/gatsby-source-hashnode/blob/main/README.md",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source-plugin",
+    "hashnode"
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/nitzano/gatsby-source-hashnode.git",
+  "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "graphql": "^15.4.0",
+    "graphql-request": "^3.4.0",
+    "reading-time": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "babel-preset-gatsby-package": "^0.10.0",
+    "cross-env": "^7.0.3",
+    "jest": "^26.6.3",
+    "np": "^7.2.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.3.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.15"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "prebuild": "yarn run clean",
+    "build": "babel src --out-dir .",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir ",
+    "test": "jest",
+    "release": "np"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}

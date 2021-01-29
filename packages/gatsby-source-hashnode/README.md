@@ -6,9 +6,6 @@
 
 # gatsby-source-hashnode
 
-
-
-
 Gatsby source plugin for building websites using [Hashnode](https://hashnode.com/) as data source.
 
 
@@ -25,8 +22,6 @@ Gatsby source plugin for building websites using [Hashnode](https://hashnode.com
 ```bash
 npm install gatsby-source-hashnode
 ```
-
-
 
 ## How to use
 
@@ -57,17 +52,17 @@ module.exports = {
     allHashNodePost {
         edges {
             node {
-                coverImage
-                brief
-                slug
-                title
+                coverImage  # "http://..."
+                brief       # "In this article..."
+                slug        # "my-great-article"
+                title       # "My Great Article"
             }
         }
     }
 }
 ```
 
-### Get post reading time
+### Get post's reading time
 
 (With the kind help of [reading-time](https://www.npmjs.com/package/reading-time))
 

@@ -1,16 +1,37 @@
-version: '3.4'
+version: '3.8'
 
 services:
-  lib:
-    tty: yes    
-    image: gatsby-source-hashnode:dev
+  base:
+    image: gsh:dev
+    tty: yes
     build:
-      context: .
-      dockerfile: ./dev.Dockerfile
-    environment:
-      NODE_ENV: development
-    volumes:
-      - ./src:/usr/src/app/src
+      context: ./      
+      dockerfile: dev.Dockerfile
+    volumes: 
+      - ./packages/gatsby-source-hashnode/package.json:/usr/src/app/packages/gatsby-source-hashnode/package.json
+      - ./packages/sample-site/package.json:/usr/src/app/packages/sample-site/package.json
       - ./package.json:/usr/src/app/package.json
       - ./yarn.lock:/usr/src/app/yarn.lock
+  sample-site:
+    image: gsh:dev
+    command: /bin/bash
+    tty: yes
+    ports:
+      - "8000:8000"
+    environment:
+      HASHNODE_USERNAME: $HASHNODE_USERNAME
+    working_dir: /usr/src/app
+    volumes:
+      - ./packages/sample-site/src:/usr/src/app/packages/sample-site/src
+      - ./packages/sample-site/package.json:/usr/src/app/packages/sample-site/package.json
+      - ./packages/sample-site/gatsby-config.js:/usr/src/app/packages/sample-site/gatsby-config.js
+      - ./packages/gatsby-source-hashnode/src:/usr/src/app/packages/gatsby-source-hashnode/src
+  lib:
+    tty: yes
+    working_dir: /usr/src/app/packages/gatsby-source-hashnode
+    command: /bin/sh    
+    image: gsh:dev
+    volumes:
+      - ./packages/gatsby-source-hashnode/src:/usr/src/app/packages/gatsby-source-hashnode/src
+      - ./packages/gatsby-source-hashnode/package.json:/usr/src/app/packages/gatsby-source-hashnode/package.json
 

@@ -24,7 +24,7 @@ export const typeDefs = gql`
     words: Int
   }
 
-  type HashNodeUser {
+  type HashNodeUser implements Node {
     _id: ID
     username: String
     name: String
