@@ -3,9 +3,15 @@ version: '3.8'
 services:
   base:
     image: gsh:dev
+    tty: yes
     build:
       context: ./      
       dockerfile: dev.Dockerfile
+    volumes: 
+      - ./packages/gatsby-source-hashnode/package.json:/usr/src/app/packages/gatsby-source-hashnode/package.json
+      - ./packages/sample-site/package.json:/usr/src/app/packages/sample-site/package.json
+      - ./package.json:/usr/src/app/package.json
+      - ./yarn.lock:/usr/src/app/yarn.lock
   sample-site:
     image: gsh:dev
     command: /bin/bash
