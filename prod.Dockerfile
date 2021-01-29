@@ -18,7 +18,4 @@ RUN git config user.email ${GIT_USER_EMAIL}
 # install deps
 RUN yarn install
 
-# build
-ENV NODE_ENV production
-
 CMD /bin/sh
