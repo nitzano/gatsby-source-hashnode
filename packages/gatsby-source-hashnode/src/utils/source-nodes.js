@@ -27,6 +27,7 @@ export async function sourceNodes(
     internal: {
       type: "HashNodeUser",
       description: "details about the user",
+      contentDigest: createContentDigest(userDetails._id),
     },
   };
 
