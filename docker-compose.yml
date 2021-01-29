@@ -14,7 +14,7 @@ services:
       - "8000:8000"
     environment:
       HASHNODE_USERNAME: $HASHNODE_USERNAME
-    working_dir: /usr/src/app/packages/sample-site
+    working_dir: /usr/src/app
     volumes:
       - ./packages/sample-site/src:/usr/src/app/packages/sample-site/src
       - ./packages/sample-site/package.json:/usr/src/app/packages/sample-site/package.json
