@@ -4,6 +4,7 @@ services:
   lib:
     image: gatsby-source-hashnode:prod
     tty: yes
+    working_dir: /usr/src/app/packages/gatsby-source-hashnode
     build:
       context: .
       dockerfile: ./prod.Dockerfile
