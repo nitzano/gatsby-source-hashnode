@@ -9,6 +9,8 @@ WORKDIR /usr/src/app
 # clone from git using deploy key
 RUN git clone https://${GITHUB_PERSONAL_TOKEN}@github.com/nitzano/gatsby-source-hashnode.git .
 
+RUN git pull
+
 # config git
 RUN git config user.name "${GIT_USER_NAME}"
 RUN git config user.email ${GIT_USER_EMAIL}
@@ -18,6 +20,5 @@ RUN yarn install
 
 # build
 ENV NODE_ENV production
-RUN yarn workspace gatsby-source-hashnode build
 
 CMD /bin/sh
