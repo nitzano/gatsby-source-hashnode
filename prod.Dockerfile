@@ -16,6 +16,6 @@ RUN git config user.name "${GIT_USER_NAME}"
 RUN git config user.email ${GIT_USER_EMAIL}
 
 # install deps
-RUN yarn install
+RUN yarn install --frozen-lockfile
 
 CMD /bin/sh
