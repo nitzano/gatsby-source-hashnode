@@ -18,7 +18,6 @@ services:
     volumes:
       - ./packages/sample-site/src:/usr/src/app/packages/sample-site/src
       - ./packages/sample-site/package.json:/usr/src/app/packages/sample-site/package.json
-      - ./packages/sample-site/yarn.lock:/usr/src/app/packages/sample-site/yarn.lock
   lib:
     tty: yes
     working_dir: /usr/src/app/packages/gatsby-source-hashnode
