@@ -34,4 +34,5 @@ services:
     volumes:
       - ./packages/gatsby-source-hashnode/src:/usr/src/app/packages/gatsby-source-hashnode/src
       - ./packages/gatsby-source-hashnode/package.json:/usr/src/app/packages/gatsby-source-hashnode/package.json
+      - ./packages/gatsby-source-hashnode/babel-config.json:/usr/src/app/packages/gatsby-source-hashnode/babel-config.json
 
