@@ -1,10 +1,10 @@
+# gatsby-source-hashnode
 
 [![npm](https://img.shields.io/npm/v/gatsby-source-hashnode.svg)](https://www.npmjs.com/package/gatsby-source-hashnode)
 [![npm](https://img.shields.io/npm/dw/gatsby-source-hashnode.svg)](https://www.npmjs.com/package/gatsby-source-hashnode)
-[![license](https://img.shields.io/github/license/nitzano/gatsby-source-hashnode.svg)](https://github.com/nitzano/enum-converter/blob/master/LICENSE)
+[![npm](https://badgen.net/npm/dm/gatsby-source-hashnode)]((https://www.npmjs.com/package/gatsby-source-hashnode))
+[![license](https://img.shields.io/github/license/nitzano/gatsby-source-hashnode.svg)](https://github.com/nitzano/gatsby-source-hashnode/blob/master/LICENSE)
 
-
-# gatsby-source-hashnode
 
 Gatsby source plugin for building websites using [Hashnode](https://hashnode.com/) as data source.
 
@@ -14,7 +14,7 @@ Gatsby source plugin for building websites using [Hashnode](https://hashnode.com
   - [How to use](#how-to-use)
   - [How to query](#how-to-query)
     - [Get  user posts](#get--user-posts)
-    - [Get post reading time](#get-post-reading-time)
+    - [Get post's reading time](#get-posts-reading-time)
     - [Get user details](#get-user-details)
 
 ## Install
@@ -102,9 +102,9 @@ module.exports = {
                 numFollowing       # 14
                 numFollowers       # 503
                 isDeactivated      # false
-                location           # Canada
-                photo              # https:/...
-                coverImage         # https:/...
+                location           # "Canada
+                photo              # "https:/...
+                coverImage         # "https:/...
                 numPosts           # 50
                 numReactions       # 95
                 blogHandle         # "userhandle1"
