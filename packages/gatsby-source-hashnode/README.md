@@ -102,7 +102,7 @@ module.exports = {
                 numFollowing       # 14
                 numFollowers       # 503
                 isDeactivated      # false
-                location           # "Canada
+                location           # "Canada"
                 photo              # "https:/...
                 coverImage         # "https:/...
                 numPosts           # 50
