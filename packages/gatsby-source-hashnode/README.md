@@ -1,3 +1,4 @@
+
 # gatsby-source-hashnode
 
 [![npm](https://img.shields.io/npm/v/gatsby-source-hashnode.svg)](https://www.npmjs.com/package/gatsby-source-hashnode)
@@ -52,8 +53,8 @@ module.exports = {
     allHashNodePost {
         edges {
             node {
-                coverImage  # "http://..."
                 brief       # "In this article..."
+                coverImage  # "http://..."
                 slug        # "my-great-article"
                 title       # "My Great Article"
             }
@@ -74,8 +75,8 @@ module.exports = {
             node {
                 title
                 readingTime {
-                    text       # "2 min read"
                     minutes    # 2
+                    text       # "2 min read"
                     time       # 120000
                     words      # 100
                 }
@@ -94,21 +95,21 @@ module.exports = {
         edges {
             node {
                 _id
-                username           # "username1"
-                name               # "First last"
-                tagline            # "I do stuff"
-                isEvangelist       # true
-                dateJoined         # "2014-01-01T01:00:00.000Z"
-                numFollowing       # 14
-                numFollowers       # 503
-                isDeactivated      # false
-                location           # "Canada"
-                photo              # "https:/...
+                blogHandle         # "userhandle1"
                 coverImage         # "https:/...
+                dateJoined         # "2014-01-01T01:00:00.000Z"
+                isDeactivated      # false
+                isEvangelist       # true
+                location           # "Canada"
+                name               # "First last"
+                numFollowers       # 503
+                numFollowing       # 14
                 numPosts           # 50
                 numReactions       # 95
-                blogHandle         # "userhandle1"
+                photo              # "https:/...
                 publicationDomain  # "blog.mydomain.."
+                tagline            # "I do stuff"
+                username           # "username1"
             }
         }
     }
