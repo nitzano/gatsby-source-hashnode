@@ -21,4 +21,4 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - name: Test
-        run: yarn workspace gatsby-source-hashnode test
+        run: yarn test
