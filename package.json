@@ -1,22 +1,59 @@
 {
-  "version": "0.2.0",
-  "private": true,
+  "name": "gatsby-source-hashnode",
+  "description": "Gatsby source plugin for building data from Hashnode",
+  "version": "1.0.2",
+  "bugs": {
+    "url": "https://github.com/nitzano/gatsby-source-hashnode/issues"
+  },
+  "files": [
+    "index.js",
+    "gatsby-node.js",
+    "utils"
+  ],
+  "homepage": "https://github.com/nitzano/gatsby-source-hashnode/tree/main/packages/gatsby-source-hashnode#readme",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source-plugin",
+    "hashnode"
+  ],
   "main": "index.js",
-  "repository": "git@github.com-nitzano:nitzano/gatsby-source-hashnode.git",
+  "repository": "https://github.com/nitzano/gatsby-source-hashnode.git",
   "author": "Nitzan Ohana <16689354+nitzano@users.noreply.github.com>",
   "license": "MIT",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
-  "scripts": {
-    "rebuild": "run-s lib:build sample-site:develop",
-    "lib:build": "yarn workspace gatsby-source-hashnode build",
-    "sample-site:develop": "yarn workspace sample-site develop"
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "graphql": "^15.5.2",
+    "graphql-request": "^3.5.0",
+    "reading-time": "^1.4.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12",
-    "npm-run-all": "^4.1.5"
-  } 
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.4",
+    "babel-jest": "^27.1.0",
+    "babel-preset-gatsby-package": "^1.13.0",
+    "cross-env": "^7.0.3",
+    "jest": "^27.1.0",
+    "np": "^7.5.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.4.7"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.15"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "prebuild": "yarn run clean",
+    "build": "cross-env NODE_ENV=production babel src --out-dir .",
+    "prepare": "yarn build",
+    "watch": "babel -w src --out-dir ",
+    "test": "jest",
+    "release": "np"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }
