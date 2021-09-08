@@ -45,13 +45,13 @@
     "clean": "rimraf lib",
     "prebuild": "yarn run clean",
     "build": "cross-env NODE_ENV=production babel src --out-dir .",
-    "prepare": "npm run build",
+    "prepare": "yarn build",
     "watch": "babel -w src --out-dir ",
     "test": "jest",
     "release": "np"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=14.17.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
