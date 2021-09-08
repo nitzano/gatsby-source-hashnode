@@ -3,6 +3,9 @@ version: "3.8"
 services:
   lib:
     tty: yes
+    build:
+      context: .
+      dockerfile: docker/dev.Dockerfile
     command: /bin/sh
     image: gsh:dev
     volumes:
