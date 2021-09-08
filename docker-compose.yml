@@ -11,4 +11,5 @@ services:
     volumes:
       - ./src:/usr/src/app/src
       - ./package.json:/usr/src/app/package.json
+      - ./yarn.lock:/usr/src/app/yarn.lock
       - ./babel-config.json:/usr/src/app/babel-config.json
