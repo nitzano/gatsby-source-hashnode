@@ -34,7 +34,6 @@
     "babel-preset-gatsby-package": "^1.13.0",
     "cross-env": "^7.0.3",
     "jest": "^27.1.0",
-    "np": "^7.5.0",
     "rimraf": "^3.0.2",
     "semantic-release": "^17.4.7"
   },
