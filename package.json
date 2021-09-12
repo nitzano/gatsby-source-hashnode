@@ -1,7 +1,7 @@
 {
   "name": "gatsby-source-hashnode",
   "description": "Gatsby source plugin for building data from Hashnode",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "bugs": {
     "url": "https://github.com/nitzano/gatsby-source-hashnode/issues"
   },
