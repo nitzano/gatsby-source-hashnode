@@ -48,7 +48,7 @@
     "prepare": "yarn build",
     "watch": "babel -w src --out-dir ",
     "test": "jest",
-    "release": "np",
+    "release": "semantic-release",
     "semantic-release": "semantic-release"
   },
   "engines": {
