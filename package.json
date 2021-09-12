@@ -1,7 +1,7 @@
 {
   "name": "gatsby-source-hashnode",
   "description": "Gatsby source plugin for building data from Hashnode",
-  "version": "1.0.1",
+  "version": "0.0.0-development",
   "bugs": {
     "url": "https://github.com/nitzano/gatsby-source-hashnode/issues"
   },
@@ -48,7 +48,8 @@
     "prepare": "yarn build",
     "watch": "babel -w src --out-dir ",
     "test": "jest",
-    "release": "np"
+    "release": "np",
+    "semantic-release": "semantic-release"
   },
   "engines": {
     "node": ">=14.17.0"
