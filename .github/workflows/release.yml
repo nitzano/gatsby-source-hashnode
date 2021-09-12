@@ -6,7 +6,7 @@ on:
       - next
 
 jobs:
-  test_pkg:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,4 +20,6 @@ jobs:
       - name: Test
         run: yarn test
       - name: Release
-        run: yarn semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
