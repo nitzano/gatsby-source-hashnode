@@ -6,6 +6,7 @@
 [![npm](https://badgen.net/npm/dm/gatsby-source-hashnode)]((https://www.npmjs.com/package/gatsby-source-hashnode))
 [![license](https://img.shields.io/github/license/nitzano/gatsby-source-hashnode.svg)](https://github.com/nitzano/gatsby-source-hashnode/blob/master/LICENSE)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 
 Gatsby source plugin for building websites using [Hashnode](https://hashnode.com/) as data source.
