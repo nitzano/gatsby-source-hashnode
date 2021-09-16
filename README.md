@@ -1,7 +1,8 @@
 
 # gatsby-source-hashnode
 
-[![npm](https://img.shields.io/npm/v/gatsby-source-hashnode.svg)](https://www.npmjs.com/package/gatsby-source-hashnode)
+[![npm](https://img.shields.io/npm/v/gatsby-source-hashnode)](https://www.npmjs.com/package/gatsby-source-hashnode)
+[![npm](https://img.shields.io/npm/v/gatsby-source-hashnode/next)](https://www.npmjs.com/package/gatsby-source-hashnode)
 [![npm](https://img.shields.io/npm/dw/gatsby-source-hashnode.svg)](https://www.npmjs.com/package/gatsby-source-hashnode)
 [![npm](https://badgen.net/npm/dm/gatsby-source-hashnode)]((https://www.npmjs.com/package/gatsby-source-hashnode))
 [![license](https://img.shields.io/github/license/nitzano/gatsby-source-hashnode.svg)](https://github.com/nitzano/gatsby-source-hashnode/blob/master/LICENSE)
