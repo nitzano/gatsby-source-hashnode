@@ -1,8 +1,8 @@
 <h1 align="center">gatsby-source-hashnode</h1>
 
-<center>
+<div align="center">
 Gatsby source plugin for building websites using <a href="https://hashnode.com/">Hashnode</a> as data source.  
-</center>
+</div>
 <p></p>
 
 <div align="center">
