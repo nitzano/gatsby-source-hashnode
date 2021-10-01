@@ -63,7 +63,7 @@ export async function sourceNodes(
 
     if (coverImage) {
       try {
-        let coverImageNode = await createRemoteFileNode({
+        coverImageNode = await createRemoteFileNode({
           url: coverImage,
           parentNodeId: node.id,
           getCache,
