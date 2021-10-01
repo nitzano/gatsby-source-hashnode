@@ -77,10 +77,12 @@ export async function sourceNodes(
         });
       } catch (e) {
         // ignore
+        logger(`error while creating cover image node: ${e}`);
       }
     }
 
     if (coverImageNode) {
+      logger(`adding cover image node: ${coverImageNode}`);
       node.coverImage__NODE = coverImageNode.id;
     }
   });
