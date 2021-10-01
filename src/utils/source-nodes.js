@@ -1,5 +1,4 @@
 import debug from "debug";
-import { createRemoteFileNode } from "gatsby-source-filesystem";
 import readingTime from "reading-time";
 import { getUserDetails } from "./get-user-details";
 import { getUserPosts } from "./get-user-posts";
@@ -11,6 +10,8 @@ export async function sourceNodes(
   { actions, createNodeId, createContentDigest, getCache },
   { username }
 ) {
+  logger("sourcing-nodes");
+
   const { createNode, createTypes } = actions;
   // check username exists
   if (!username) {
@@ -41,7 +42,7 @@ export async function sourceNodes(
   const posts = await getUserPosts(username);
 
   // process posts
-  posts.map(async (post) => {
+  posts.map((post) => {
     const { _id, contentMarkdown = "", coverImage } = post;
 
     const nodeSchema = {
@@ -59,31 +60,6 @@ export async function sourceNodes(
     };
 
     // create the node
-    const node = createNode(nodeSchema);
-
-    // attach cover image if exists
-    let coverImageNode;
-
-    if (coverImage) {
-      logger(`cover image: ${coverImage}`);
-
-      try {
-        coverImageNode = await createRemoteFileNode({
-          url: coverImage,
-          parentNodeId: node.id,
-          getCache,
-          createNode,
-          createNodeId,
-        });
-      } catch (e) {
-        // ignore
-        logger(`error while creating cover image node: ${e}`);
-      }
-    }
-
-    if (coverImageNode) {
-      logger(`adding cover image node: ${coverImageNode}`);
-      node.coverImage__NODE = coverImageNode.id;
-    }
+    createNode(nodeSchema);
   });
 }
