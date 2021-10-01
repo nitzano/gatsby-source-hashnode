@@ -74,10 +74,10 @@ module.exports = {
         brief # "In this article..."
         # File node (to be used with gatsby-plugin-image)
         coverImage {
-          absolutePath
-          relativePath
-          extension
-          url # "https://cdn.hashnode.com/...
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+          }
+          # OR: url // "https://cdn.hashnode.com/...
         }
         slug # "my-great-article"
         title # "My Great Article"
