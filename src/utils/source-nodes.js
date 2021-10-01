@@ -4,7 +4,7 @@ import { getUserPosts } from "./get-user-posts";
 import { typeDefs } from "./type-defs";
 
 export async function sourceNodes(
-  { actions, createNodeId, createContentDigest },
+  { actions, createNodeId, createContentDigest, getCache },
   { username }
 ) {
   const { createNode, createTypes } = actions;
@@ -38,9 +38,9 @@ export async function sourceNodes(
 
   // process posts
   posts.map((post) => {
-    const { _id, contentMarkdown = "" } = post;
+    const { _id, contentMarkdown = "", coverImage } = post;
 
-    const node = {
+    const nodeSchema = {
       ...post,
       readingTime: readingTime(contentMarkdown),
       id: createNodeId(_id),
@@ -54,6 +54,24 @@ export async function sourceNodes(
       },
     };
 
-    createNode(node);
+    // create the node
+    const node = createNode(nodeSchema);
+
+    // attach cover image if exists
+    let coverImageNode;
+
+    if (coverImage) {
+      try {
+        coverImageNode = await createRemoteFileNode({
+          url: coverImage,
+          parentNodeId: node.id,
+          getCache,
+          createNode,
+          createNodeId,
+        });
+      } catch (e) {
+        // ignore
+      }
+    }
   });
 }
