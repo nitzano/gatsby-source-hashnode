@@ -1,3 +1,4 @@
+import { createRemoteFileNode } from "gatsby-source-filesystem";
 import readingTime from "reading-time";
 import { getUserDetails } from "./get-user-details";
 import { getUserPosts } from "./get-user-posts";
@@ -37,7 +38,7 @@ export async function sourceNodes(
   const posts = await getUserPosts(username);
 
   // process posts
-  posts.map((post) => {
+  posts.map(async (post) => {
     const { _id, contentMarkdown = "", coverImage } = post;
 
     const nodeSchema = {
