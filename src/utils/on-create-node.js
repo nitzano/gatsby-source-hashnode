@@ -29,6 +29,7 @@ export async function onCreateNode({
         });
       } catch (e) {
         // ignore
+        console.error(e);
         logger(`error while creating cover image node: ${e}`);
       }
     }
