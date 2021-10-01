@@ -77,7 +77,7 @@ module.exports = {
           absolutePath
           relativePath
           extension
-          url # "https://cdn.hashnode.com
+          url # "https://cdn.hashnode.com/...
         }
         slug # "my-great-article"
         title # "My Great Article"
