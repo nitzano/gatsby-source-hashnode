@@ -1,5 +1,6 @@
 import debug from "debug";
 import readingTime from "reading-time";
+import { HASHNODE_NODE_TYPE } from "./consts";
 import { getUserDetails } from "./get-user-details";
 import { getUserPosts } from "./get-user-posts";
 import { typeDefs } from "./type-defs";
@@ -52,7 +53,7 @@ export async function sourceNodes(
       parent: null,
       children: [],
       internal: {
-        type: "HashNodePost",
+        type: HASHNODE_NODE_TYPE,
         mediaType: `text/markdown`,
         content: contentMarkdown,
         contentDigest: createContentDigest(post),

@@ -1,5 +1,6 @@
 import debug from "debug";
 import { createRemoteFileNode } from "gatsby-source-filesystem";
+import { HASHNODE_NODE_TYPE } from "./consts";
 
 const logger = debug(`gatsby-source-hashnode:onCreateNode`);
 
@@ -11,7 +12,7 @@ export async function onCreateNode({
 }) {
   logger(`node type: ${node.internal.type}`);
 
-  if (node.internal.type === "TBD") {
+  if (node.internal.type === HASHNODE_NODE_TYPE) {
     // attach cover image if exists
     const { coverImage } = node;
 
