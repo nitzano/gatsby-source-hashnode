@@ -1,8 +1,11 @@
+import debug from "debug";
 import { createRemoteFileNode } from "gatsby-source-filesystem";
 import readingTime from "reading-time";
 import { getUserDetails } from "./get-user-details";
 import { getUserPosts } from "./get-user-posts";
 import { typeDefs } from "./type-defs";
+
+const logger = debug(`gatsby-source-hashnode:source-nodes`);
 
 export async function sourceNodes(
   { actions, createNodeId, createContentDigest, getCache },
@@ -62,6 +65,8 @@ export async function sourceNodes(
     let coverImageNode;
 
     if (coverImage) {
+      logger(`cover image: ${coverImage}`);
+
       try {
         coverImageNode = await createRemoteFileNode({
           url: coverImage,
