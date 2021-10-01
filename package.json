@@ -23,6 +23,8 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.15.4",
+    "debug": "^4.3.2",
+    "gatsby-source-filesystem": "^3.14.0",
     "graphql": "^15.5.2",
     "graphql-request": "^3.5.0",
     "reading-time": "^1.4.0"

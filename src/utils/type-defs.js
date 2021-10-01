@@ -5,7 +5,7 @@ export const typeDefs = gql`
     _id: String
     brief: String
     contentMarkdown: String
-    coverImage: String
+    coverImage: File @link(from: "coverImage__NODE")
     cuid: String
     # publication date
     dateAdded: String
