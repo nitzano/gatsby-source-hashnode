@@ -72,7 +72,13 @@ module.exports = {
     edges {
       node {
         brief # "In this article..."
-        coverImage # "http://..."
+        # File node (to be used with gatsby-plugin-image)
+        coverImage {
+          absolutePath
+          relativePath
+          extension
+          url # "https://cdn.hashnode.com
+        }
         slug # "my-great-article"
         title # "My Great Article"
       }
