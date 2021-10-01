@@ -10,8 +10,6 @@ export async function onCreateNode({
   createNodeId,
   getCache,
 }) {
-  logger(`node type: ${node.internal.type}`);
-
   if (node.internal.type === HASHNODE_NODE_TYPE) {
     // attach cover image if exists
     const { coverImage } = node;
@@ -20,23 +18,18 @@ export async function onCreateNode({
       logger(`cover image: ${coverImage}`);
 
       try {
-        coverImageNode = await createRemoteFileNode({
+        const coverImageNode = await createRemoteFileNode({
           url: coverImage,
           parentNodeId: node.id,
           getCache,
           createNode,
           createNodeId,
         });
+        node.coverImage__NODE = coverImageNode.id;
       } catch (e) {
-        // ignore
-        console.error(e);
+        logger.error(e);
         logger(`error while creating cover image node: ${e}`);
       }
-    }
-
-    if (coverImageNode) {
-      logger(`adding cover image node: ${coverImageNode}`);
-      node.coverImage__NODE = coverImageNode.id;
     }
   }
 }
