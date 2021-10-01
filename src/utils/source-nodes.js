@@ -12,7 +12,7 @@ export async function sourceNodes(
 ) {
   logger("sourcing-nodes");
 
-  const { createNode, createTypes } = actions;
+  const { createNode } = actions;
   // check username exists
   if (!username) {
     throw new Error("no username supplied");
@@ -40,7 +40,7 @@ export async function sourceNodes(
 
   // process posts
   posts.map((post) => {
-    const { _id, contentMarkdown = "", coverImage } = post;
+    const { _id, contentMarkdown = "" } = post;
 
     const nodeSchema = {
       ...post,
