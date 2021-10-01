@@ -3,7 +3,6 @@ import readingTime from "reading-time";
 import { HASHNODE_NODE_TYPE } from "./consts";
 import { getUserDetails } from "./get-user-details";
 import { getUserPosts } from "./get-user-posts";
-import { typeDefs } from "./type-defs";
 
 const logger = debug(`gatsby-source-hashnode:source-nodes`);
 
@@ -18,9 +17,6 @@ export async function sourceNodes(
   if (!username) {
     throw new Error("no username supplied");
   }
-
-  // create types
-  createTypes(typeDefs);
 
   // create hash node user
   const userDetails = await getUserDetails(username);
