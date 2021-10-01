@@ -1,14 +1,14 @@
 <h1 align="center">gatsby-source-hashnode</h1>
 
-<center>
+<h3 align="center">
 Gatsby source plugin for building websites using <a href="https://hashnode.com/">Hashnode</a> as data source.  
-</center>
+</h3>
 <p></p>
 
 <div align="center">
 
 [![npm](https://img.shields.io/npm/v/gatsby-source-hashnode)](https://www.npmjs.com/package/gatsby-source-hashnode)
-[![npm](https://img.shields.io/npm/v/gatsby-source-hashnode/next)](https://www.npmjs.com/package/gatsby-source-hashnode)
+[![npm-next](https://img.shields.io/npm/v/gatsby-source-hashnode/next)](https://www.npmjs.com/package/gatsby-source-hashnode)
 [![npm](https://img.shields.io/npm/dw/gatsby-source-hashnode.svg)](https://www.npmjs.com/package/gatsby-source-hashnode)
 [![npm](https://badgen.net/npm/dm/gatsby-source-hashnode)](<(https://www.npmjs.com/package/gatsby-source-hashnode)>)
 
@@ -19,24 +19,28 @@ Gatsby source plugin for building websites using <a href="https://hashnode.com/"
 [![license](https://img.shields.io/github/license/nitzano/gatsby-source-hashnode.svg)](https://github.com/nitzano/gatsby-source-hashnode/blob/master/LICENSE)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
- </div>
-
-<div align="center">
-
 ![test workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/test.yml/badge.svg)
 ![release workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/release.yml/badge.svg)
 
-</div>
+ </div>
 
 ---
 
+- [Highlights](#highlights)
 - [Install](#install)
 - [How to use](#how-to-use)
 - [How to query](#how-to-query)
   - [Get user posts](#get-user-posts)
   - [Get post's reading time](#get-posts-reading-time)
   - [Get user details](#get-user-details)
+
+## Highlights
+
+- Retrieve Post data
+- Get estimated reading time
+- Fetch user details
+- Supports Gatsby v3
+- Converts images for [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
 
 ## Install
 
@@ -72,7 +76,13 @@ module.exports = {
     edges {
       node {
         brief # "In this article..."
-        coverImage # "http://..."
+        # File node (to be used with gatsby-plugin-image)
+        coverImage {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+          }
+          # OR: url // "https://cdn.hashnode.com/...
+        }
         slug # "my-great-article"
         title # "My Great Article"
       }
