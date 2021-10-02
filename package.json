@@ -53,7 +53,7 @@
     "semantic-release": "semantic-release"
   },
   "engines": {
-    "node": ">=14.17.0"
+    "node": "14.x"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
