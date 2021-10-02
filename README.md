@@ -36,11 +36,11 @@ Gatsby source plugin for building websites using <a href="https://hashnode.com/"
 
 ## Highlights
 
-- Retrieve Post data
-- Get estimated reading time
-- Fetch user details
-- Supports Gatsby v3
-- Converts images for [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
+- Retrieves user posts from hashnode.
+- Calculates estimated reading time.
+- Fetches user details.
+- Converts images for [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/).
+- Supports Gatsby v3.
 
 ## Install
 
@@ -76,12 +76,13 @@ module.exports = {
     edges {
       node {
         brief # "In this article..."
-        # File node (to be used with gatsby-plugin-image)
         coverImage {
+          # File node (to be used with gatsby-plugin-image)
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
-          # OR: url // "https://cdn.hashnode.com/...
+          # OR
+          # url // "https://cdn.hashnode.com/...
         }
         slug # "my-great-article"
         title # "My Great Article"

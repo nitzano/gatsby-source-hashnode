@@ -10,7 +10,7 @@
     "gatsby-node.js",
     "utils"
   ],
-  "homepage": "https://github.com/nitzano/gatsby-source-hashnode/tree/main/packages/gatsby-source-hashnode#readme",
+  "homepage": "https://github.com/nitzano/gatsby-source-hashnode",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
@@ -53,7 +53,7 @@
     "semantic-release": "semantic-release"
   },
   "engines": {
-    "node": ">=14.17.0"
+    "node": ">=12.13.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
