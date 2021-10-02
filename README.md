@@ -76,12 +76,13 @@ module.exports = {
     edges {
       node {
         brief # "In this article..."
-        # File node (to be used with gatsby-plugin-image)
         coverImage {
+          # File node (to be used with gatsby-plugin-image)
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
-          # OR: url // "https://cdn.hashnode.com/...
+          # OR
+          # url // "https://cdn.hashnode.com/...
         }
         slug # "my-great-article"
         title # "My Great Article"
