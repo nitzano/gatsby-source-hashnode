@@ -5,19 +5,21 @@ import { gql, request } from "graphql-request";
  *
  * @export
  * @param {string} username
+ * @param {int} page
  */
-export async function getUserPosts(username) {
+export async function getUserPosts(usernam, pagee) {
   const variables = {
     username,
+    page,
   };
 
   // query information
   const query = gql`
-    query getPosts($username: String!) {
+    query getPosts($username: String!, $page: Int) {
       user(username: $username) {
         publicationDomain
         publication {
-          posts {
+          posts(page: $page) {
             _id
             brief
             contentMarkdown
