@@ -37,16 +37,14 @@ export async function sourceNodes(
     createNode(hashNodeUser);
 
     // get posts
-    let page = 0;
     let posts = [];
-    while (true) {
-      let nextPage = await getUserPosts(username, page);
+    for (let i = 0; i < 9999; i++) {
+      let nextPage = await getUserPosts(username, i);
 
       if (nextPage.length === 0)
         break;
 
       posts.push(...nextPage);
-      page++;
     }
 
     // process posts
