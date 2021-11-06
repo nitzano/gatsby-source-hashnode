@@ -9,8 +9,8 @@ Gatsby source plugin for building websites using <a href="https://hashnode.com/"
 
 [![npm](https://img.shields.io/npm/v/gatsby-source-hashnode)](https://www.npmjs.com/package/gatsby-source-hashnode)
 [![npm-beta](https://img.shields.io/npm/v/gatsby-source-hashnode/beta)](https://www.npmjs.com/package/gatsby-source-hashnode)
-![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/gatsby-source-hashnode?style=flat)
 [![npm-month](https://badgen.net/npm/dm/gatsby-source-hashnode)](<(https://www.npmjs.com/package/gatsby-source-hashnode)>)
+![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/gatsby-source-hashnode?style=flat)
 
 </div>
 
