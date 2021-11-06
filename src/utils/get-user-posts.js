@@ -1,13 +1,13 @@
 import { gql, request } from "graphql-request";
 
 /**
- * Retrieves all the user posts for a specific userName
+ * Retrieves all the user posts for a specific user name
  *
  * @export
  * @param {string} username
  * @param {int} page
  */
-export async function getUserPosts(usernam, pagee) {
+export async function getUserPosts(username, page) {
   const variables = {
     username,
     page,
