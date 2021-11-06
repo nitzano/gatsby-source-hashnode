@@ -37,7 +37,15 @@ export async function sourceNodes(
     createNode(hashNodeUser);
 
     // get posts
-    const posts = await getUserPosts(username);
+    let posts = [];
+    for (let i = 0; i < 9999; i++) {
+      let nextPage = await getUserPosts(username, i);
+
+      if (nextPage.length === 0)
+        break;
+
+      posts.push(...nextPage);
+    }
 
     // process posts
     posts.map((post) => {
