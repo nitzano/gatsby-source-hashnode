@@ -3,7 +3,6 @@
 <h3 align="center">
 Gatsby source plugin for building websites using <a href="https://hashnode.com/">Hashnode</a> as data source.  
 </h3>
-<br/>
 
 <div align="center">
 
