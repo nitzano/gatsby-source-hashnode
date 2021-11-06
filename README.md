@@ -36,11 +36,11 @@ Gatsby source plugin for building websites using <a href="https://hashnode.com/"
 
 ## Highlights
 
-- Retrieves user posts from hashnode.
-- Calculates estimated reading time.
-- Fetches user details.
-- Converts images for [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/).
-- Supports Gatsby v3.
+- Retrieves user posts
+- Calculates estimated reading time
+- Fetches user details
+- Converts images for [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
+- Supports Gatsby v3
 
 ## Install
 
