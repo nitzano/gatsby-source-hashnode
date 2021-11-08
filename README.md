@@ -3,27 +3,20 @@
 <h3 align="center">
 Gatsby source plugin for building websites using <a href="https://hashnode.com/">Hashnode</a> as data source.  
 </h3>
-<p></p>
 
 <div align="center">
 
 [![npm](https://img.shields.io/npm/v/gatsby-source-hashnode)](https://www.npmjs.com/package/gatsby-source-hashnode)
-[![npm-next](https://img.shields.io/npm/v/gatsby-source-hashnode/next)](https://www.npmjs.com/package/gatsby-source-hashnode)
-[![npm](https://img.shields.io/npm/dw/gatsby-source-hashnode.svg)](https://www.npmjs.com/package/gatsby-source-hashnode)
-[![npm](https://badgen.net/npm/dm/gatsby-source-hashnode)](<(https://www.npmjs.com/package/gatsby-source-hashnode)>)
+[![npm-beta](https://img.shields.io/npm/v/gatsby-source-hashnode/beta)](https://www.npmjs.com/package/gatsby-source-hashnode)
+[![npm-month](https://badgen.net/npm/dm/gatsby-source-hashnode)](<(https://www.npmjs.com/package/gatsby-source-hashnode)>)
+![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/gatsby-source-hashnode?style=social)
 
 </div>
 
 <div align="center">
 
-[![license](https://img.shields.io/github/license/nitzano/gatsby-source-hashnode.svg)](https://github.com/nitzano/gatsby-source-hashnode/blob/master/LICENSE)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
- </div>
-
- <div align="center">
-
 ![test workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/test.yml/badge.svg)
 ![release workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/release.yml/badge.svg)
 
