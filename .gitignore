@@ -141,9 +141,9 @@ dist
 
 # output files
 
-./gatsby-node.js
-./index.js
-./utils
+gatsby-node.js
+index.js
+utils
 
 # yarn v2
 # .pnp.*
