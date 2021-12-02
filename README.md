@@ -9,19 +9,14 @@ Gatsby source plugin for building websites using <a href="https://hashnode.com/"
 
 [![npm](https://img.shields.io/npm/v/gatsby-source-hashnode)](https://www.npmjs.com/package/gatsby-source-hashnode)
 [![npm-beta](https://img.shields.io/npm/v/gatsby-source-hashnode/beta)](https://www.npmjs.com/package/gatsby-source-hashnode)
-[![npm-month](https://badgen.net/npm/dm/gatsby-source-hashnode)](<(https://www.npmjs.com/package/gatsby-source-hashnode)>)
-![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/gatsby-source-hashnode?style=social)
-
-</div>
-
-<div align="center">
-
+![npm-total](https://img.shields.io/npm/dt/gatsby-source-hashnode)
+![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/gatsby-source-hashnode?style=flat)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-![test workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/test.yml/badge.svg)
 ![release workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/release.yml/badge.svg)
+![test workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/test.yml/badge.svg)
 
- </div>
+</div>
 
 ---
 
