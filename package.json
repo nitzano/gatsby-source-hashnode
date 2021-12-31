@@ -41,7 +41,7 @@
     "semantic-release": "^18.0.0"
   },
   "peerDependencies": {
-    "gatsby": "3.x | 4.x"
+    "gatsby": "4.x"
   },
   "scripts": {
     "clean": "rimraf lib",
