@@ -39,8 +39,8 @@ Build Gatsby websites with <a href="https://hashnode.com/">Hashnode</a> as a dat
 - Fetches user details
 - Converts images for [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
 - Supported versions
-  - Gatsby v4
-  - Gatsby v3 (`release-2` tag)
+  - Gatsby v4 ( `@latest` tag)
+  - Gatsby v3 (`@release-2` tag)
 
 ## Install
 
