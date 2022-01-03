@@ -6,6 +6,7 @@ on:
       - next
       - master
       - beta
+      - "2.x"
 
 jobs:
   release:
