@@ -1,7 +1,7 @@
 <h1 align="center">gatsby-source-hashnode</h1>
 
 <h3 align="center">
-Gatsby source plugin for building websites using <a href="https://hashnode.com/">Hashnode</a> as data source.  
+Build Gatsby websites with <a href="https://hashnode.com/">Hashnode</a> as a data source  
 </h3>
 
 ---
@@ -14,8 +14,6 @@ Gatsby source plugin for building websites using <a href="https://hashnode.com/"
 ![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/gatsby-source-hashnode?style=flat)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
-
 
 </div>
 
@@ -40,7 +38,9 @@ Gatsby source plugin for building websites using <a href="https://hashnode.com/"
 - Calculates estimated reading time
 - Fetches user details
 - Converts images for [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
-- Supports Gatsby v3
+- Supported versions
+  - Gatsby v4
+  - Gatsby v3 (`release-2` tag),
 
 ## Install
 
