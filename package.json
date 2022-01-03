@@ -24,14 +24,15 @@
   "dependencies": {
     "@babel/runtime": "^7.15.4",
     "debug": "^4.3.2",
-    "gatsby-source-filesystem": "^4.0.0",
+    "gatsby": "^4.0.0",
+    "gatsby-source-filesystem": "^4.4.0",
     "graphql": "^16.1.0",
     "graphql-request": "^3.5.0",
     "reading-time": "^1.4.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.4",
-    "@babel/core": "^7.15.4",
+    "@babel/core": "^7.15.5",
     "babel-jest": "^27.1.0",
     "babel-preset-gatsby-package": "^2.0.0",
     "cross-env": "^7.0.3",
@@ -40,7 +41,7 @@
     "semantic-release": "^18.0.0"
   },
   "peerDependencies": {
-    "gatsby": "^3.0.0"
+    "gatsby": "4.x"
   },
   "scripts": {
     "clean": "rimraf lib",
@@ -53,7 +54,7 @@
     "semantic-release": "semantic-release"
   },
   "engines": {
-    "node": ">=12.13.0"
+    "node": ">=14.15.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

@@ -38,7 +38,9 @@ Build Gatsby websites with <a href="https://hashnode.com/">Hashnode</a> as a dat
 - Calculates estimated reading time
 - Fetches user details
 - Converts images for [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
-- Supports Gatsby v3
+- Supported versions
+  - Gatsby v4
+  - Gatsby v3 (`release-2` tag),
 
 ## Install
 
