@@ -17,13 +17,6 @@ Build Gatsby websites with <a href="https://hashnode.com/">Hashnode</a> as a dat
 
 </div>
 
-<div align="center">
-
-![release workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/release.yml/badge.svg)
-![test workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/test.yml/badge.svg)
-
-</div>
-
 - [Highlights](#highlights)
 - [Install](#install)
 - [How to use](#how-to-use)
@@ -31,6 +24,10 @@ Build Gatsby websites with <a href="https://hashnode.com/">Hashnode</a> as a dat
   - [Get user posts](#get-user-posts)
   - [Get post's reading time](#get-posts-reading-time)
   - [Get user details](#get-user-details)
+
+![release workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/release.yml/badge.svg)
+![test workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/test.yml/badge.svg)
+
 
 ## Highlights
 
