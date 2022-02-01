@@ -1,10 +1,7 @@
 <h1 align="center">gatsby-source-hashnode</h1>
-
-<h3 align="center">
+<h2 align="center">
 Build Gatsby websites with <a href="https://hashnode.com/">Hashnode</a> as a data source  
-</h3>
-
----
+</h2>
 
 <div align="center">
 
