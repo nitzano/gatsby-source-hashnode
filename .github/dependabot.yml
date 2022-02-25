@@ -16,14 +16,3 @@ updates:
       prefix: "fix"
       prefix-development: "chore"
       include: "scope"
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-    labels:
-      - deps
-    target-branch: 2.x
-    commit-message:
-      prefix: "fix"
-      prefix-development: "chore"
-      include: "scope"
