@@ -1,10 +1,7 @@
 <h1 align="center">gatsby-source-hashnode</h1>
-
-<h3 align="center">
+<h2 align="center">
 Build Gatsby websites with <a href="https://hashnode.com/">Hashnode</a> as a data source  
-</h3>
-
----
+</h2>
 
 <div align="center">
 
@@ -14,13 +11,6 @@ Build Gatsby websites with <a href="https://hashnode.com/">Hashnode</a> as a dat
 ![GitHub Repo stars](https://img.shields.io/github/stars/nitzano/gatsby-source-hashnode?style=flat)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
-</div>
-
-<div align="center">
-
-![release workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/release.yml/badge.svg)
-![test workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/test.yml/badge.svg)
 
 </div>
 
@@ -39,10 +29,13 @@ Build Gatsby websites with <a href="https://hashnode.com/">Hashnode</a> as a dat
 - Fetches user details
 - Converts images for [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
 - Supported versions
-  - Gatsby v4
-  - Gatsby v3 (`release-2` tag),
+  - Gatsby v4 ( `@latest` tag)
+  - Gatsby v3 (`@release-2` tag)
 
 ## Install
+
+![release workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/release.yml/badge.svg)
+![test workflow](https://github.com/nitzano/gatsby-source-hashnode/actions/workflows/test.yml/badge.svg)
 
 ```bash
 npm install gatsby-source-hashnode
