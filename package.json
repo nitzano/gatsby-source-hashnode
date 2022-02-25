@@ -27,7 +27,7 @@
     "gatsby": "^4.0.0",
     "gatsby-source-filesystem": "^4.4.0",
     "graphql": "^16.1.0",
-    "graphql-request": "^3.5.0",
+    "graphql-request": "^4.0.0",
     "reading-time": "^1.4.0"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "cross-env": "^7.0.3",
     "jest": "^27.1.0",
     "rimraf": "^3.0.2",
-    "semantic-release": "^18.0.0"
+    "semantic-release": "^19.0.2"
   },
   "peerDependencies": {
     "gatsby": "4.x"
