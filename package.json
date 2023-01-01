@@ -27,7 +27,7 @@
     "gatsby": "^4.0.0",
     "gatsby-source-filesystem": "^4.4.0",
     "graphql": "^16.1.0",
-    "graphql-request": "^4.0.0",
+    "graphql-request": "^5.1.0",
     "reading-time": "^1.4.0"
   },
   "devDependencies": {
